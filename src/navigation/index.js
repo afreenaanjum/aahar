@@ -2,15 +2,18 @@ import * as React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {View} from 'react-native';
 
-import SplashScreen from '../SplashScreen/index';
-import Landing from '../Landing/index';
-import SignUp from '../SignUpSignIn';
-import colors from '../Utils/Colors';
+import SplashScreen from '../components/SplashScreen/index';
+import Landing from '../components/Landing/index';
+import SignUp from '../components/SignUpSignIn';
+import colors from '../utils/Colors';
+import HomePage from '../components/HomePage';
 
 const Stack = createStackNavigator();
 
 const RootStack = () => {
-  const screenOptions = {
+  const appScreenOptions = {
+    // stackAnimation: 'none',
+    // cardStyle: {backgroundColor: 'rgba(0,0,0,0)', opacity: 1},
     headerStyle: {
       backgroundColor: colors.primaryColor,
     },
@@ -22,7 +25,7 @@ const RootStack = () => {
     headerRight: () => <View />,
   };
   return (
-    <Stack.Navigator screenOptions={screenOptions}>
+    <Stack.Navigator screenOptions={appScreenOptions}>
       <Stack.Screen
         name="SplashScreen"
         component={SplashScreen}
@@ -37,6 +40,11 @@ const RootStack = () => {
         name="SignUp"
         component={SignUp}
         options={{title: 'Sign Up'}}
+      />
+      <Stack.Screen
+        name="HomePage"
+        component={HomePage}
+        options={{title: 'HomePage'}}
       />
     </Stack.Navigator>
   );

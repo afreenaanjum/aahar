@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {color} from 'react-native-reanimated';
-import colors from './Utils/Colors';
+import colors from './Colors';
 
 const styles = StyleSheet.create({
   row: {
@@ -8,6 +7,14 @@ const styles = StyleSheet.create({
   },
   column: {
     flexDirection: 'row',
+  },
+  textInput: {
+    borderColor: colors.secondaryColor,
+    borderWidth: 1,
+    borderRadius: 5,
+    color: colors.secondaryColor,
+    padding: 10,
+    fontSize: 16,
   },
   container: {
     flex: 1,

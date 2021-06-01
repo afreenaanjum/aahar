@@ -1,12 +1,16 @@
-import React, {Component} from 'react';
-import {Image, View, Text, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {Image, View, Text} from 'react-native';
 import img from '../SplashScreen/img/AppLogo.jpg';
-import styles from '../AppCommonCss';
-import colors from '../Utils/Colors';
+import styles from '../../utils/AppCommonCss';
+import colors from '../../utils/Colors';
+import CustomButton from '../Common/button';
 
 function Landing({navigation}) {
   const pushtoSignUp = () => {
     navigation.push('SignUp');
+  };
+  const pushtoSignIn = () => {
+    navigation.push('SignUp', {isSignIn: true});
   };
 
   return (
@@ -21,17 +25,18 @@ function Landing({navigation}) {
           styles.alignCenter,
           {marginBottom: 140},
         ]}>
-        <TouchableOpacity
-          activeOpacity={1}
-          style={styles.button}
-          onPress={pushtoSignUp}>
-          <Text style={styles.buttonText}>Sign Up</Text>
-        </TouchableOpacity>
+        <CustomButton
+          buttonText="Sign Up"
+          handleOnPress={pushtoSignUp}
+          buttonStyle={styles.button}
+          buttonTextStyle={styles.buttonText}></CustomButton>
         <Text style={styles.setMarginTop(10)}>
           <Text style={{color: colors.white}}>
             Do you already have an account?
           </Text>
-          <Text style={{color: colors.primaryColor}}>{'  Signin'}</Text>
+          <Text style={{color: colors.primaryColor}} onPress={pushtoSignIn}>
+            {'  Signin'}
+          </Text>
         </Text>
       </View>
     </View>

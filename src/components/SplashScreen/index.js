@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
-import {StyleSheet, Image, View} from 'react-native';
+import {Image, View} from 'react-native';
 import img from './img/AppLogo.jpg';
 import {StackActions} from '@react-navigation/native';
-import styles from '../AppCommonCss';
+import styles from '../../utils/AppCommonCss';
 
 function SplashScreen({navigation}) {
   useEffect(() => {
