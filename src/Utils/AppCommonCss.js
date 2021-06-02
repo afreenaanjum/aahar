@@ -2,18 +2,18 @@ import {StyleSheet} from 'react-native';
 import colors from './Colors';
 
 const styles = StyleSheet.create({
-  row: {
+  column: {
     flexDirection: 'column',
   },
-  column: {
+  row: {
     flexDirection: 'row',
   },
-  textInput: {
+
+  textContainerStyle: {
     borderColor: colors.secondaryColor,
     borderWidth: 1,
     borderRadius: 5,
     color: colors.secondaryColor,
-    padding: 10,
     fontSize: 16,
   },
   container: {
