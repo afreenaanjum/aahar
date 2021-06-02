@@ -17,6 +17,8 @@ function CustomTextInput(props) {
     textInputContainerStyle,
     height,
     errorMessage,
+    placeHolder,
+    placeHolderTextColor,
   } = props;
   return (
     <View style={styles.setMargin(10)}>
@@ -50,6 +52,8 @@ function CustomTextInput(props) {
             onSubmitEditing={validation}
             keyboardType={keyboardType}
             secureTextEntry={secureTextEntry ?? false}
+            placeholder={placeHolder}
+            placeholderTextColor={placeHolderTextColor}
           />
         </View>
         {rightImgIcon && (

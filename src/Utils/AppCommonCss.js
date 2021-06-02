@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     color: colors.secondaryColor,
     fontSize: 16,
+    padding: 3,
   },
   container: {
     flex: 1,

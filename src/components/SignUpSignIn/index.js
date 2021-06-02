@@ -90,6 +90,7 @@ function SignUp({route, navigation}) {
         handleOnChange={val => setPassword(val.nativeEvent.text)}
         label="Password"
         secureTextEntry={true}
+        errorMessage={confirmPasswordError}
       />
       {!isSignIn && (
         <CustomTextInput
@@ -115,6 +116,11 @@ function SignUp({route, navigation}) {
             ) {
               navigation.popToTop();
               navigation.dispatch(StackActions.replace('HomePage', {}));
+            } else {
+              validateEmail();
+              if (password === '') {
+                setConfirmPasswordError('Field is empty');
+              }
             }
           } else {
             if (
