@@ -6,6 +6,8 @@ import CustomTextInput from '../Common/textInput';
 import searchIcon from './search.png';
 import CustomCard from './ListCard';
 import foodImg from './avacado.jpeg';
+import TabNavigation from '../../navigation/tabNavigation';
+import DrawerNavigation from '../../navigation/sideNavigator';
 
 function HomePage({navigation}) {
   const DATA = [
@@ -64,7 +66,7 @@ function HomePage({navigation}) {
   const [searchText, setSearchText] = useState('');
   return (
     <SafeAreaView style={[styles.container, styles.bgBlack]}>
-      <CustomTextInput
+      {/* <CustomTextInput
         textInputVal={searchText}
         textInputContainerStyle={styles.textContainerStyle}
         textInputStyle={{color: colors.secondaryColor}}
@@ -76,13 +78,13 @@ function HomePage({navigation}) {
         placeHolderTextColor={colors.secondaryColor}
       />
       <View style={[styles.setMargin(10), styles.container]}>
-        {/* <CustomCard foodImg={foodImg} /> */}
         <FlatList
           data={DATA}
           renderItem={renderItem}
           keyExtractor={item => item.id}
         />
-      </View>
+      </View> */}
+      {/* <TabNavigation /> */}
     </SafeAreaView>
   );
 }

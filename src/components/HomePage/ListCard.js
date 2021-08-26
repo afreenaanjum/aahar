@@ -45,7 +45,7 @@ function CustomCard(props) {
               borderTopRightRadius: 20,
               borderBottomRightRadius: 20,
               paddingHorizontal: 2,
-              backgroundColor: '#000000',
+              backgroundColor: '#332E30',
               paddingLeft: 10,
               //   opacity: 0.5,
             },

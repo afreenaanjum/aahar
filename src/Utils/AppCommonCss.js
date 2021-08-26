@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     fontSize: 16,
     textAlign: 'center',
-    color: colors.black,
+    color: colors.white,
   },
   setMargin: val => {
     return {margin: val};
